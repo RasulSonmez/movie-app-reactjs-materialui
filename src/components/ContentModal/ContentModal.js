@@ -12,6 +12,7 @@ import {
   unavailable,
   unavailableLandscape,
 } from "../../config/config";
+import Carousel from "../Carousel/Carousel";
 const style = {
   position: "absolute",
   top: "50%",
@@ -119,6 +120,10 @@ export default function TransitionsModal({ children, media_type, id }) {
                     <span className="ContentModal__description">
                       {content.overview}
                     </span>
+
+                    <div>
+                      <Carousel id={id} media_type={media_type} />
+                    </div>
 
                     <Button
                       variant="contained"
